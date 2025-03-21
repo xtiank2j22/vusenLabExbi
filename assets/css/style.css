@@ -1,0 +1,170 @@
+.custom-caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: left;
+  width: auto;
+  max-width: 40%;
+  background: rgba(
+    1,
+    53,
+    47,
+    0.7
+  ); /* Teal Green (#038375) with 70% transparency */
+  padding: 20px;
+  border-radius: 10px;
+  height: 300px !important;
+}
+
+/* Ensure text scales properly */
+.custom-caption h2 {
+  font-size: 2rem; /* Default size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-caption p {
+  font-size: 1rem;
+}
+
+/* Make buttons responsive */
+.custom-caption .d-flex {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-get-started,
+.btn-watch-video {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+.bg-footer {
+  background-color: #000000;
+  color: white;
+}
+.card-bg {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+.card-bg h3 {
+  color: color-mix(in srgb, var(--heading-color), transparent 20%);
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 4px solid
+    color-mix(in srgb, var(--heading-color), transparent 90%);
+  transition: 0.3s;
+}
+.card-bg:hover h3 {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+  color: var(--heading-color);
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-caption {
+    width: 90%;
+    max-width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 15px;
+  }
+  .cap-write {
+    display: none !important;
+  }
+  .custom-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .custom-caption p {
+    font-size: 0.9rem;
+  }
+
+  .custom-caption .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-get-started,
+  .btn-watch-video {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+/* Set fixed height for carousel images on large screens */
+.carousel-inner img {
+  height: 720px;
+  /* Ensures the image maintains aspect ratio without distortion */
+}
+
+/* Adjust height for responsiveness */
+@media (max-width: 1024px) {
+  .carousel-inner img {
+    height: 500px; /* Reduce height on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 400px; /* Reduce height for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-inner img {
+    height: 300px; /* Further reduce height for small mobile screens */
+  }
+}
+/* for card image hover  */
+.text-logo-green {
+  color: #008374;
+}
+.bg-badge-h {
+  background-color: #0f1014 !important;
+}
+.bg-badge-h:hover {
+  background-color: #e5e6eb !important;
+  color: #008374;
+}
+/* .img-core{} */
+/*form section*/
+.section-hero {
+  position: relative;
+  background-image: url("../img/iotbg.webp"); /* Replace with your image URL */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  color: white; /* Change text color to white for visibility */
+}
+
+.section-hero h2,
+.section-hero p {
+  position: relative; /* Ensure text stays on top of the background */
+  z-index: 1;
+}
+/* add more form input */
+.hidden {
+  display: none !important;
+}
+#add-member-btn {
+  background-color: #0f1014 !important;
+}
+#add-member-btn:hover {
+  background-color: #008374 !important;
+}
+/* image card size */
+.h-215 {
+  height: 215px !important;
+}
+.h-550 {
+  height: 550px !important;
+}
