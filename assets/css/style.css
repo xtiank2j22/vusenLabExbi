@@ -103,7 +103,7 @@
 }
 /* Set fixed height for carousel images on large screens */
 .carousel-inner img {
-  height: 720px;
+  height: 1000px;
   /* Ensures the image maintains aspect ratio without distortion */
 }
 
