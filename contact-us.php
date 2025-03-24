@@ -9,8 +9,9 @@
   <meta name="keywords" content="">
   <?php include_once 'includes/links.php' ?>
 </head>
+
 <body class="blog-details-page">
-<?php include_once 'includes/header.php' ?>
+  <?php include_once 'includes/header.php' ?>
   <main class="main">
     <!-- Page Title -->
     <div class="page-title">
@@ -78,34 +79,34 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade" data-aos-delay="100">
+            <form action="https://formspree.io/f/xkgjbowz" method="post" enctype="text/plain" class="php-email-form" data-aos="fade" data-aos-delay="100">
+
               <div class="row gy-4">
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
                   <button type="submit">Send Message</button>
                 </div>
               </div>
             </form>
+
           </div><!-- End Contact Form -->
         </div>
       </div>
     </section><!-- /Contact Section -->
   </main>
-<?php include_once 'includes/footer.php' ?>
+  <?php include_once 'includes/footer.php' ?>
 
 </body>
 

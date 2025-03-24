@@ -16,24 +16,23 @@
         <!-- Page Title -->
         <div class="page-title section-hero">
             <div class="heading">
-                <div class="container-fluid">
+                <div class="container-fluid ">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1>Your Project Proposal Form</h1>
-                            <p class="mb-0">Veritas University Software Engineering Exhibition & Competition Questionnaire</p>
+                            <p class="mb-0">Veritas University Software Enginerring Exhibition & Competition Questionaire</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!-- End Page Title -->
-
         <!-- Contact Section -->
         <section id="contact" class="contact section">
+            <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Form</h2>
-                <p>Each team is to provide the information needed in this form.</p>
+                <p>Each Team are to provide the  information need in in this form</p>
             </div><!-- End Section Title -->
-
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gx-lg-0 gy-2">
                     <div class="col-lg-12">
@@ -43,9 +42,7 @@
                             <div class="progress">
                                 <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-
-                            <!-- Form -->
-                            <form action="cms/form_processing.php" method="POST" data-aos="fade" data-aos-delay="100" enctype="multipart/form-data">
+                            <form action="cms/form_processing.php" method="POST" class="php-email-form" data-aos="fade" data-aos-delay="100" enctype="multipart/form-data">
                                 <!-- Step 1 -->
                                 <div class="step" id="step1">
                                     <div class="row">
@@ -53,8 +50,7 @@
                                             <label for="exampleFormControlInput1" class="form-label">Team / Group Name:</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1" name="team_name" placeholder="Enter Team Name...">
                                         </div>
-
-                                        <!-- Team Leader Information -->
+                                        <!-- for team Leader -->
                                         <h4 class="text-logo-green">(Team Leader Information)</h4>
                                         <div class="mb-3 col-6">
                                             <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -72,7 +68,6 @@
                                             <label for="exampleFormControlInput1" class="form-label">Department</label>
                                             <input type="text" class="form-control" id="dept-leader" name="dept_leader" placeholder="Software Engr">
                                         </div>
-
                                         <div id="team-members">
                                             <!-- Default first team member -->
                                             <div class="team-member mb-4">
@@ -97,15 +92,13 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Add Member Button -->
                                         <div class="d-flex justify-content-end">
-                                            <button id="add-member-btn" class="col-2 btn text-white" type="button">
+                                            <button id="add-member-btn" class="col-2 btn text-white ">
                                                 <i class="bi bi-plus text-white fw-bolder"></i> Add Member
                                             </button>
                                         </div>
-
-                                        <!-- Hidden template for team member -->
+                                        <!-- Hidden template -->
                                         <div id="team-member-template" class="team-member mb-4 hidden">
                                             <h4>Team Member <span class="member-number"></span></h4>
                                             <div class="row">
@@ -127,11 +120,10 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Thematics Area -->
+                                        <!-- thematics Area -->
                                         <h4 class="text-logo-green">(Thematics Area Selection) / Project Overview</h4>
                                         <div class="mb-3 col-6">
-                                            <label for="expertise" class="form-label">Which thematics area does your project fall under?</label>
+                                            <label for="expertise" class="form-label">Which thematics area dose your project fall under?</label>
                                             <select class="form-select" id="expertise" name="expertise">
                                                 <option selected disabled>Select thematics</option>
                                                 <option value="education">Education</option>
@@ -142,13 +134,12 @@
                                             </select>
                                         </div>
                                         <div class="mb-3 col-6">
-                                            <label for="exampleFormControlInput1" class="form-label">What's your Project Title?</label>
+                                            <label for="exampleFormControlInput1" class="form-label">Whats your Project Title?</label>
                                             <input type="text" class="form-control" id="project-title" name="project_title" placeholder="Wireless car">
                                         </div>
                                     </div>
                                     <button class="btn btn-primary" type="button" onclick="nextStep()">Next</button>
                                 </div>
-
                                 <!-- Step 2 -->
                                 <div class="step" id="step2" style="display: none;">
                                     <div class="row">
@@ -158,15 +149,15 @@
                                             <textarea class="form-control" id="project-sum" name="project_summary" rows="3"></textarea>
                                         </div>
                                         <div class="mb-3 col-6">
-                                            <label for="exampleFormControlTextarea1" class="form-label">What specific problem does your project aim to address within the chosen theme (max 100 words)</label>
+                                            <label for="exampleFormControlTextarea1" class="form-label">What specific problem dose your project aim to address within the choosen theme (max 100 words)</label>
                                             <textarea class="form-control" id="project-aim" name="problem_addressed" rows="3"></textarea>
                                         </div>
                                         <div class="mb-3 col-6">
-                                            <label for="exampleFormControlTextarea1" class="form-label">Why is this problem significant in Nigeria? (max 150 words)</label>
+                                            <label for="exampleFormControlTextarea1" class="form-label">Why is this problem significant in Nigeria ? (max 150 words)</label>
                                             <textarea class="form-control" id="project-significant" name="significance" rows="3"></textarea>
                                         </div>
                                         <div class="mb-3 col-6">
-                                            <label for="exampleFormControlTextarea1" class="form-label"><span class="text-logo-green fs-3">SWOT Analysis</span><br> Identify your project's strength, weakness, opportunities, and threats</label>
+                                            <label for="exampleFormControlTextarea1" class="form-label"><span class="text-logo-green fs-3">SWOT Analysis</span><br> Identify your projects strenght, weakness, opportunities and threats</label>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" name="swot_analysis" rows="3"></textarea>
                                         </div>
                                     </div>
@@ -176,7 +167,7 @@
                                             <label class="form-label">What Technology will you use to solve the problem? (select all that apply)</label>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="iot_embeded_system" value="iot-embeded-system" id="iot-embeded-system">
-                                                <label class="form-check-label" for="iot-embeded-system">IoT/Embedded System</label>
+                                                <label class="form-check-label" for="iot-embeded-system">Iot/Embeded Sytem</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="robotics" value="robotics" id="robotics">
@@ -192,18 +183,17 @@
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="ai" value="ai" id="ai">
-                                                <label class="form-check-label" for="ai">Artificial Intelligence</label>
+                                                <label class="form-check-label" for="ai">Artificial Intellignce</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="blockchain" value="blockchain" id="blockchain">
-                                                <label class="form-check-label" for="blockchain">Blockchain</label>
+                                                <label class="form-check-label" for="blockchain">Block Chain</label>
                                             </div>
                                         </div>
                                     </div>
                                     <button class="btn btn-secondary mt-2" type="button" onclick="prevStep()">Back</button>
                                     <button class="btn btn-primary mt-2" type="button" onclick="nextStep()">Next</button>
                                 </div>
-
                                 <!-- Step 3 -->
                                 <div class="step" id="step3" style="display: none;">
                                     <div class="row">
@@ -213,10 +203,10 @@
                                             <textarea class="form-control" id="product-features" name="product_features" rows="3"></textarea>
                                         </div>
                                         <div class="mb-3 col-6">
-                                            <label for="exampleFormControlTextarea1" class="form-label">How does your product provide a solution to the identified problem? (max 150 words)</label>
+                                            <label for="exampleFormControlTextarea1" class="form-label">How dose your product provide solution to the identified problem? (max 150 words)</label>
                                             <textarea class="form-control" id="product-solution" name="product_solution" rows="3"></textarea>
                                         </div>
-                                        <h2 class="text-logo-green">Implementation Plan</h2>
+                                        <h2 class="text-logo-green">Implientation Plan</h2>
                                         <div class="mb-3 col-6">
                                             <label for="expertise" class="form-label">What stage of development is your solution?</label>
                                             <select class="form-select" id="expertise" name="expertise">
@@ -229,21 +219,20 @@
                                         </div>
                                         <div class="mb-3 col-6">
                                             <label for="presntation" class="form-label">Upload your presentation Slide (ppt format)</label>
-                                            <input type="file" name="team_ppt" accept=".ppt,.pptx" class="form-control">
+                                            <input type="file" name="team_ppt" accept=".ppt,.pptx" class="form-control" >
                                         </div>
                                         <div class="mb-3 col-6">
                                             <label for="presntation" class="form-label">Upload your Projects images (Min: 3, Max: 5)</label>
-                                            <input type="file" name="team_images[]" accept="image/*" class="form-control" multiple>
+                                            <input type="file" name="team_images[]" accept="image/*" class="form-control" multiple >
                                         </div>
                                         <div class="mb-3 col-6">
-                                            <label for="exampleFormControlTextarea1" class="form-label"><span class="text-logo-green fs-3">Final Statement</span><br> Explain why your project deserves recognition in the Software Engineering Exhibition & Competition (max 150 words)</label>
+                                            <label for="exampleFormControlTextarea1" class="form-label"><span class="text-logo-green fs-3">Final Statement</span><br> Explain why your project deserve reorginition in the software Enginerring Exhibition & Competition (max 150words)</label>
                                             <textarea class="form-control" id="final-statement" name="final_statement" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <button class="btn btn-secondary mt-2" type="button" onclick="prevStep()">Back</button>
                                 </div>
-
-                                <input class="btn btn-primary mt-2" type="submit" name="submit" value="Submit">
+                                <button class="btn btn-primary mt-2" type="submit" name="submit">Submit</button>
                             </form>
                         </div>
                     </div><!-- End Contact Form -->
@@ -251,54 +240,7 @@
             </div>
         </section><!-- /Contact Section -->
     </main>
-
     <?php include_once 'includes/footer.php' ?>
-
-    <script>
-        // Handle form steps and prevent default form submission on button clicks
-        document.querySelectorAll('button').forEach(button => {
-            if (button.type !== 'submit') {
-                button.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent form submission on any button click
-                    if (button.id === "add-member-btn") {
-                        addTeamMember(); // Function to add a new team member
-                    }
-                });
-            }
-        });
-
-        // Function to add team member
-        function addTeamMember() {
-            const teamMemberTemplate = document.getElementById('team-member-template').cloneNode(true);
-            teamMemberTemplate.style.display = 'block'; // Make the template visible
-
-            // Generate a unique member number (e.g., based on the current number of members)
-            const memberNumber = document.querySelectorAll('.team-member').length + 1;
-            teamMemberTemplate.querySelector('.member-number').textContent = memberNumber;
-
-            // Append the new team member input fields
-            document.getElementById('team-members').appendChild(teamMemberTemplate);
-        }
-
-        // Manage form steps (next and previous step navigation)
-        function nextStep() {
-            const currentStep = document.querySelector('.step:not([style*="display: none"])');
-            currentStep.style.display = 'none';
-            const nextStep = currentStep.nextElementSibling;
-            if (nextStep) {
-                nextStep.style.display = 'block';
-            }
-        }
-
-        function prevStep() {
-            const currentStep = document.querySelector('.step:not([style*="display: none"])');
-            currentStep.style.display = 'none';
-            const prevStep = currentStep.previousElementSibling;
-            if (prevStep) {
-                prevStep.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 
 </html>
