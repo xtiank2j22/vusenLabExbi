@@ -68,6 +68,9 @@
   border-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   color: var(--heading-color);
 }
+.form-control input {
+  border-radius: 8px !important;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .custom-caption {
@@ -103,7 +106,7 @@
 }
 /* Set fixed height for carousel images on large screens */
 .carousel-inner img {
-  height: 1000px;
+  height: 800px !important;
   /* Ensures the image maintains aspect ratio without distortion */
 }
 
@@ -140,7 +143,7 @@
 /*form section*/
 .section-hero {
   position: relative;
-  background-image: url("../img/iotbg.webp"); /* Replace with your image URL */
+  background-image: url("img/iotbg.webp"); /* Replace with your image URL */
   background-size: cover; /* Ensure the image covers the entire container */
   background-position: center; /* Center the image */
   color: white; /* Change text color to white for visibility */

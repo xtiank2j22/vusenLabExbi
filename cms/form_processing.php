@@ -1,15 +1,5 @@
-<?php
-// Database connection
-$servername = "127.0.0.1";
-$username = "root";
-$password = '';
-$database = "software_exhibition";
-
-// Connect to the database
-$conn = new mysqli($servername, $username, $password, $database);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+<!-- db connection -->
+<?php include_once 'admin/include/db_conn.php';
 
 // Allowed MIME types for file validation
 $allowed_image_types = ['image/jpeg', 'image/png'];
@@ -135,7 +125,7 @@ try {
 
     // Commit transaction
     $conn->commit();
-    echo "<script>alert('Registration Successful!'); window.location.href='../index.html';</script>";
+    echo "<script>alert('Registration Successful!'); window.location.href='../index.php';</script>";
 } catch (Exception $e) {
     // Rollback on error
     $conn->rollback();

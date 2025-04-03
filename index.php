@@ -7,7 +7,7 @@
   <title>Software EXHIBITION</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <!-- the links for the css and other links -->
+  <!-- the links for the css and other links --->
   <?php include_once 'includes/links.php' ?>
 
 <body class="index-page">
@@ -26,7 +26,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="/assets/img/slider/slider-10.jpeg" class="img-fluid rounded-4 mb-4" alt="">
+            <img src="assets/img/slider/slider-10.jpeg" class="img-fluid rounded-4 mb-4" alt="">
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
             <div class="content ps-0 ps-lg-5">
@@ -140,59 +140,38 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Exhibition Awards & Cash Prices</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Recognizing innovation and excellence with prestigious awards and exciting cash prizes</p>
       </div><!-- End Section Title -->
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <div class="row g-4">
           <div class="col-lg-4">
             <div class="pricing-item">
-              <h3>3RD Position</h3>
               <div class="icon">
                 <i class="bi bi-box"></i>
               </div>
-              <h4><sup>₦</sup>0</h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <!-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> -->
+              <h4>VC's Award</h4>
+              <h3 class="text-center">Vice Chancellor’s Excellence Award</h3>
+              <p class="text-center">A special recognition for outstanding creativity and impact, personally awarded by the Vice Chancellor</p>
             </div>
           </div><!-- End Pricing Item -->
           <div class="col-lg-4">
             <div class="pricing-item featured">
-              <h3>1st Position</h3>
               <div class="icon">
                 <i class="bi bi-rocket"></i>
               </div>
-              <h4><sup>₦</sup>0</h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <!-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> -->
+              <h4>₦1 Million</h4>
+              <h3 class="fs-5">Grand Prize for Innovation</h3>
+              <p class="text-center">The top winner will receive a prestigious award along with a ₦1 million cash prize to support their groundbreaking ideas.</p>
             </div>
           </div><!-- End Pricing Item -->
           <div class="col-lg-4">
             <div class="pricing-item">
-              <h3>2ND Position</h3>
               <div class="icon">
                 <i class="bi bi-send"></i>
               </div>
-              <h4><sup>₦</sup>0</h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <!-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> -->
+              <h4>Other Awards</h4>
+              <h3 class="text-center">Multiple Awards for Outstanding Achievements</h3>
+              <p class="text-center">From Best Innovation to People's Choice, many prestigious awards await participants who showcase excellence</p>
             </div>
           </div><!-- End Pricing Item -->
         </div>
@@ -306,7 +285,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Exhibition Core Areas</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Exploring key focus areas that drive innovation, creativity, and technological advancements in the exhibition</p>
       </div><!-- End Section Title -->
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <div class="row g-4">
@@ -316,8 +295,7 @@
               <div class="img-core">
                 <img src="assets/img/logo/web-app.png" alt="web images" class="img-fluid">
               </div>
-              <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dicta odio facere excepturi
-              </p>
+              <p class="text-justify text-center">Web applications drive innovation by enhancing accessibility and efficiency. They enable seamless interaction, automation, and real-time collaboration</p>
               <div class="text-center"><a href="#" class="buy-btn">Submit Proposal</a></div>
             </div>
           </div><!-- End Pricing Item -->
@@ -327,8 +305,7 @@
               <div class="img-core">
                 <img src="assets/img/logo/mobile.png" alt="web images" class="img-fluid">
               </div>
-              <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dicta odio facere excepturi
-              </p>
+              <p class="text-justify text-center">Mobile apps revolutionize innovation by providing on-the-go solutions and personalized user experiences. They enhance convenience, connectivity, and engagement.</p>
               <div class="text-center"><a href="#" class="buy-btn">Submit Proposal</a></div>
             </div>
           </div><!-- End Pricing Item -->
@@ -338,8 +315,7 @@
               <div class="img-core">
                 <img src="assets/img/logo/embedded.png" alt="web images" class="img-fluid">
               </div>
-              <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dicta odio facere excepturi
-              </p>
+              <p class="text-justify text-center">Embedded systems drive innovation by enabling smart automation and real-time processing. They power intelligent devices across various industries.</p>
               <div class="text-center"><a href="#" class="buy-btn">Submit Proposal</a></div>
             </div>
           </div><!-- End Pricing Item -->

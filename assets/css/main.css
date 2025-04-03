@@ -911,7 +911,7 @@ section,
   margin-bottom: 30px;
 }
 
-.hero .btn-get-started {
+.hero .get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
   font-family: var(--heading-font);
@@ -926,11 +926,11 @@ section,
   background-color: rgba(149, 3, 3, 0.518);
 }
 
-.hero .btn-get-started:hover {
+.hero .get-started:hover {
   border-color: rgba(255, 255, 255, 0.767);
 }
 
-.hero .btn-watch-video {
+.hero .watch-video {
   font-size: 16px;
   transition: 0.5s;
   margin-left: 25px;
@@ -938,7 +938,7 @@ section,
   color: var(--default-color);
 }
 
-.hero .btn-watch-video i {
+.hero .watch-video i {
   color: rgba(181, 3, 3, 0.906);
   font-size: 32px;
   transition: 0.3s;
@@ -946,7 +946,7 @@ section,
   margin-right: 8px;
 }
 
-.hero .btn-watch-video:hover i {
+.hero .watch-video:hover i {
   color: rgb(235, 6, 6);
 }
 
@@ -955,8 +955,8 @@ section,
     font-size: 36px;
   }
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
+  .hero .get-started,
+  .hero .watch-video {
     font-size: 14px;
   }
 }
@@ -2166,7 +2166,7 @@ section,
   font-size: 14px;
 }
 
-.portfolio-details .portfolio-info .btn-visit {
+.portfolio-details .portfolio-info .visit {
   padding: 8px 40px;
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -2174,7 +2174,7 @@ section,
   transition: 0.3s;
 }
 
-.portfolio-details .portfolio-info .btn-visit:hover {
+.portfolio-details .portfolio-info .visit:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -2668,7 +2668,7 @@ section,
   margin-bottom: 25px;
 }
 
-.comment-form form .btn-primary {
+.comment-form form .primary {
   border-radius: 4px;
   padding: 10px 20px;
   border: 0;
@@ -2676,7 +2676,7 @@ section,
   color: var(--contrast-color);
 }
 
-.comment-form form .btn-primary:hover {
+.comment-form form .primary:hover {
   color: var(--contrast-color);
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
