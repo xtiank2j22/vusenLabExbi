@@ -19,8 +19,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Projects</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <h1 class="text-green">Projects</h1>
+              <p class="mb-0 text-white">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li class="current">Projects</li>
           </ol>
         </div>
@@ -38,89 +38,83 @@
     <section id="portfolio" class="portfolio section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Projects</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit </p>
+        <h2 class="text-green">Our Projects</h2>
+        <p class="text-white">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit </p>
       </div><!-- End Section Title -->
       <div class="container">
         <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="card h-100">
-              <a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox">
-                <img src="assets/img/portfolio/branding-3.jpg" class="card-img-top img-fluid" alt="Branding 3">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="portfolio-details.html" title="More Details">Branding 3</a>
-                </h5>
-                <p class="card-text">Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Card 1 -->
-          <!-- Card 2 -->
-          <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="card h-100">
-              <a href="assets/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox">
-                <img src="assets/img/portfolio/app-2.jpg" class="card-img-top img-fluid" alt="Branding 4">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="portfolio-details.html" title="More Details">Branding 4</a>
-                </h5>
-                <p class="card-text">Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Card 2 -->
+          <?php
+          include_once 'cms/admin/include/db_conn.php';
 
-          <!-- Card 3 -->
-          <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="card h-100">
-              <a href="assets/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox">
-                <img src="assets/img/portfolio/books-1.jpg" class="card-img-top img-fluid" alt="Branding 5">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="portfolio-details.html" title="More Details">Branding 5</a>
-                </h5>
-                <p class="card-text">Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Card 3 -->
-          <!-- Card 4 -->
-          <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="card h-100">
-              <a href="assets/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox">
-                <img src="assets/img/portfolio/branding-3.jpg" class="card-img-top img-fluid" alt="Branding 6">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="portfolio-details.html" title="More Details">Branding 6</a>
-                </h5>
-                <p class="card-text">Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Card 4 -->
+          // Set number of posts per page
+          $limit = 8;
+
+          // Get current page from URL, default is 1
+          $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+
+          // Calculate the offset
+          $offset = ($page - 1) * $limit;
+
+          // Count total posts
+          $totalResult = $conn->query("SELECT COUNT(*) AS total FROM project_tb");
+          $totalRow = $totalResult->fetch_assoc();
+          $totalPosts = $totalRow['total'];
+          $totalPages = ceil($totalPosts / $limit);
+
+          // Get posts for current page
+          $sql = "SELECT id, title, about, created_at, image FROM project_tb ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+          $result3 = $conn->query($sql);
+          ?>
+          <?php if ($result3 && $result3->num_rows > 0): ?>
+            <?php while ($row = $result3->fetch_assoc()): ?>
+              <!-- Card 1 -->
+              <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
+                <div class="card h-100">
+                  <a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox">
+                    <img src="cms/admin/img/uploads/<?= !empty($row['image']) ? htmlspecialchars($row['image']) : 'default.jpg' ?>"
+                      alt="<?= htmlspecialchars($row['title']) ?>"
+                      class="img-fluid rounded pro-img" /> </a>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="portfolio-details.html" title="More Details"><?= htmlspecialchars($row['title']) ?></a>
+                    </h5>
+                    <p class="card-text"><?= htmlspecialchars($row['about']) ?></p>
+                  </div>
+                </div>
+              </div><!-- End Card 1 -->
+            <?php endwhile; ?>
+          <?php else: ?>
+            <p class="text-danger">No blog posts found.</p>
+          <?php endif; ?>
         </div>
       </div>
-    </section><!-- /Projects ends Section -->
-    <!-- Blog Pagination Section -->
-    <section id="blog-pagination" class="blog-pagination section">
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <ul>
-            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-            <li><a href="#" class="active">1</a></li>
-            <li><a href="#" >2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li>...</li>
-            <li><a href="#">10</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+      <!-- Blog Pagination Section -->
+      <div class="d-flex justify-content-center mt-4">
+        <nav>
+          <ul class="pagination">
+            <?php if ($page > 1): ?>
+              <li class="page-item mx-1">
+                <a class="page-link" href="?page=<?= $page - 1 ?>">Previous</a>
+              </li>
+            <?php endif; ?>
+
+            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+              <li class="page-item mx-1 <?= ($i == $page) ? 'active' : '' ?>">
+                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+              </li>
+            <?php endfor; ?>
+
+            <?php if ($page < $totalPages): ?>
+              <li class="page-item mx-1">
+                <a class="page-link" href="?page=<?= $page + 1 ?>">Next</a>
+              </li>
+            <?php endif; ?>
           </ul>
-        </div>
+        </nav>
       </div>
+      <!-- /Blog Pagination Section -->
+    </section><!-- /Projects ends Section -->
 
-    </section><!-- /Blog Pagination Section -->
   </main>
   <!-- footer section area -->
   <?php include_once 'includes/footer.php' ?>

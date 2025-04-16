@@ -44,7 +44,6 @@
         <!--end::Container-->
       </div>
       <div class="app-content">
-
         <!--begin::Container-->
         <div class="container-fluid">
           <div class="row">
@@ -74,8 +73,8 @@
               <!--end::Small Box Widget 1-->
             </div>
             <!--end::Col-->
-             <!--begin::Col-->
-             <div class="col-lg-3 col-6">
+            <!--begin::Col-->
+            <div class="col-lg-3 col-6">
               <!--begin::Small Box Widget 1-->
               <div class="small-box text-bg-success">
                 <div class="inner">
@@ -100,8 +99,8 @@
               <!--end::Small Box Widget 1-->
             </div>
             <!--end::Col-->
-             <!--begin::Col-->
-             <div class="col-lg-3 col-6">
+            <!--begin::Col-->
+            <div class="col-lg-3 col-6">
               <!--begin::Small Box Widget 1-->
               <div class="small-box text-bg-danger">
                 <div class="inner">
@@ -126,8 +125,8 @@
               <!--end::Small Box Widget 1-->
             </div>
             <!--end::Col-->
-             <!--begin::Col-->
-             <div class="col-lg-3 col-6">
+            <!--begin::Col-->
+            <div class="col-lg-3 col-6">
               <!--begin::Small Box Widget 1-->
               <div class="small-box text-bg-warning">
                 <div class="inner">
@@ -164,6 +163,12 @@
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table table-centered table-striped text-nowrap table-borderless mb-0 table-with-checkbox">
+                      <!-- db connection -->
+                      <?php include_once 'include/db_conn.php';
+                      // Fetch data
+                      $sql = "SELECT id, title, blog_message, created_at, image FROM blog_tb";
+                      $result = $conn->query($sql);
+                      ?>
                       <thead>
                         <tr>
                           <th>Title</th>
@@ -173,71 +178,78 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- blog row table display -->
-                        <tr>
-                          <td><img src="dist/assets/img/user2-160x160.jpg" alt="Blog 1" class="rounded-circle img-size-32 me-2" />
-                            Some Product</td>
-                          <td>we are working to see this are done with just typing rubbish</td>
-                          <td>3/12/2025</td>
-                          <td>
-                            <a href="#" class=" btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="dist/assets/img/user2-160x160.jpg" alt="Blog 1" class="rounded-circle img-size-32 me-2" />
-                            Some Product</td>
-                          <td>we are working to see this are done with just typing rubbish</td>
-                          <td>3/12/2025</td>
-                          <td>
-                            <a href="#" class=" btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                          </td>
-                        </tr>
-                        <!-- blog row table display end -->
+                        <?php if ($result->num_rows > 0): ?>
+                          <?php while ($row = $result->fetch_assoc()): ?>
+                            <!-- blog row table display -->
+                            <tr>
+                              <td>
+                                <img src="img/uploads/<?= !empty($row['image']) ? htmlspecialchars($row['image']) : 'default.jpg' ?>"
+                                  alt="<?= htmlspecialchars($row['title']) ?>"
+                                  class="rounded-circle img-size-32 me-2" />
+                                <?= htmlspecialchars($row['title']) ?>
+                              <td><?= htmlspecialchars($row['blog_message']) ?></td>
+                              <td><?= date("d/m/Y", strtotime($row['created_at'])) ?></td>
+                              <td>
+                                <a href="#" class=" btn btn-success">Edit</a>
+                                <a href="#" class="btn btn-danger">Delete</a>
+                              </td>
+                            </tr>
+                            <!-- blog row table display end -->
+                          <?php endwhile; ?>
+                        <?php else: ?>
+                          <tr>
+                            <td colspan="4">No blog posts found.</td>
+                          </tr>
+                        <?php endif; ?>
                       </tbody>
                     </table>
+
                   </div>
                 </div>
                 <!-- /.card -->
               </div>
               <!-- /.card -->
-              <div class="card my-3">
-                <div class="card-title bg-dark">
-                  <h4 class="px-3 py-2 fw-bolder text-white">Faq Section</h4>
+              <div class="card">
+                <div class="card-title bg-dark text-white">
+                  <h4 class="px-3 py-2 fw-bolder">Faq Section</h4>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table table-centered table-striped text-nowrap table-borderless mb-0 table-with-checkbox">
+                      <!-- db connection -->
+                      <?php include_once 'include/db_conn.php';
+                      // Fetch data
+                      $sql = "SELECT id, faq_title, faq_message, created_date FROM faq";
+                      $result2 = $conn->query($sql);
+                      ?>
                       <thead>
                         <tr>
                           <th>Title</th>
-                          <th>Messages</th>
+                          <th>Descriptions</th>
                           <th>Date Created</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- blog row table display -->
-                        <tr>
-                          <td>Some Product</td>
-                          <td>we are working to see this are done with just typing rubbish</td>
-                          <td>3/12/2025</td>
-                          <td>
-                            <a href="#" class=" btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Some Product</td>
-                          <td>we are working to see this are done with just typing rubbish</td>
-                          <td>3/12/2025</td>
-                          <td>
-                            <a href="#" class=" btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                          </td>
-                        </tr>
-                        <!-- blog row table display end -->
+                        <?php if ($result2->num_rows > 0): ?>
+                          <?php while ($row = $result2->fetch_assoc()): ?>
+                            <!-- blog row table display -->
+                            <tr>
+                              <td><?= htmlspecialchars($row['faq_title']) ?></td>
+                              <td><?= htmlspecialchars($row['faq_message']) ?></td>
+                              <td><?= date("d/m/Y", strtotime($row['created_date'])) ?></td>
+                              <td>
+                                <a href="#" class=" btn btn-success">Edit</a>
+                                <a href="#" class="btn btn-danger">Delete</a>
+                              </td>
+                            </tr>
+                            <!-- blog row table display end -->
+                          <?php endwhile; ?>
+                        <?php else: ?>
+                          <tr>
+                            <td colspan="4">No blog posts found.</td>
+                          </tr>
+                        <?php endif; ?>
                       </tbody>
                     </table>
                   </div>
@@ -245,13 +257,19 @@
                 <!-- /.card -->
               </div>
               <!-- /.card -->
-              <div class="card my-3">
+              <div class="card">
                 <div class="card-title bg-dark text-white">
                   <h4 class="px-3 py-2 fw-bolder">Project Section</h4>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table table-centered table-striped text-nowrap table-borderless mb-0 table-with-checkbox">
+                      <!-- db connection -->
+                      <?php include_once 'include/db_conn.php';
+                      // Fetch data
+                      $sql = "SELECT id, title, about, created_at, image FROM project_tb";
+                      $result3 = $conn->query($sql);
+                      ?>
                       <thead>
                         <tr>
                           <th>Title</th>
@@ -261,28 +279,28 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- blog row table display -->
-                        <tr>
-                          <td><img src="dist/assets/img/user2-160x160.jpg" alt="Blog 1" class="rounded-circle img-size-32 me-2" />
-                            Some Product</td>
-                          <td>we are working to see this are done with just typing rubbish</td>
-                          <td>3/12/2025</td>
-                          <td>
-                            <a href="#" class=" btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="dist/assets/img/user2-160x160.jpg" alt="Blog 1" class="rounded-circle img-size-32 me-2" />
-                            Some Product</td>
-                          <td>we are working to see this are done with just typing rubbish</td>
-                          <td>3/12/2025</td>
-                          <td>
-                            <a href="#" class=" btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                          </td>
-                        </tr>
-                        <!-- blog row table display end -->
+                        <?php if ($result3->num_rows > 0): ?>
+                          <?php while ($row = $result3->fetch_assoc()): ?>
+                            <!-- blog row table display -->
+                            <tr>
+                              <td>
+                                <img src="img/uploads/<?= !empty($row['image']) ? htmlspecialchars($row['image']) : 'default.jpg' ?>"
+                                  alt="<?= htmlspecialchars($row['title']) ?>"
+                                  class="rounded-circle img-size-32 me-2" />
+                              <td><?= htmlspecialchars($row['about']) ?></td>
+                              <td><?= date("d/m/Y", strtotime($row['created_at'])) ?></td>
+                              <td>
+                                <a href="#" class=" btn btn-success">Edit</a>
+                                <a href="#" class="btn btn-danger">Delete</a>
+                              </td>
+                            </tr>
+                            <!-- blog row table display end -->
+                          <?php endwhile; ?>
+                        <?php else: ?>
+                          <tr>
+                            <td colspan="4">No blog posts found.</td>
+                          </tr>
+                        <?php endif; ?>
                       </tbody>
                     </table>
                   </div>
@@ -290,12 +308,11 @@
                 <!-- /.card -->
               </div>
             </div>
+            <!--end::Row-->
           </div>
-          <!--end::Row-->
+          <!--end::Container-->
         </div>
-        <!--end::Container-->
-      </div>
-      <!--end::App Content-->
+        <!--end::App Content-->
     </main>
     <!--end::App Main-->
     <!--begin::Footer-->

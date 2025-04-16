@@ -1,106 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog Details - Impact Bootstrap Template</title>
+  <title>Blog</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Impact
-  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body class="blog-details-page">
-
-  <header id="header" class="header fixed-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
-    <div class="branding d-flex align-items-cente">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Impact</h1>
-          <span>.</span>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero">Home<br></a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-
-    </div>
-
-  </header>
-
+  <!-- the links for the css and other links -->
+<?php include_once 'includes/links.php' ?>
+<body class="blog-page">
+<?php include_once 'includes/header.php' ?>
   <main class="main">
 
     <!-- Page Title -->
@@ -118,7 +25,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li class="current">Blog Details</li>
           </ol>
         </div>
@@ -144,48 +51,48 @@
 
                 <div class="meta-top">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.php">John Doe</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.php"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.php">12 Comments</a></li>
                   </ul>
                 </div><!-- End meta top -->
 
                 <div class="content">
-                  <p>
+                  <p class="text-dark">
                     Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
                     Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
                   </p>
 
-                  <p>
+                  <p class="text-dark">
                     Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
                   </p>
 
                   <blockquote>
-                    <p>
+                    <p class="text-dark">
                       Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
                     </p>
                   </blockquote>
 
-                  <p>
+                  <p class="text-dark">
                     Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
                     Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum exercitationem harum qui qui blanditiis neque.
                     Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto voluptatem magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
                   </p>
 
-                  <h3>Et quae iure vel ut odit alias.</h3>
-                  <p>
+                  <h3 class="text-dark">Et quae iure vel ut odit alias.</h3>
+                  <p class="text-dark">
                     Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum nesciunt aliquid qui.
                     Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint consequatur quidem ea.
                     Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
                   </p>
                   <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
 
-                  <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-                  <p>
+                  <h3 class="text-dark">Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+                  <p class="text-dark">
                     Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore. Autem facilis hic dolorum dolores vel.
                     Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam vitae.
                   </p>
-                  <p>
+                  <p class="text-dark">
                     Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
                   </p>
 
@@ -237,15 +144,15 @@
 
             <div class="container">
 
-              <h4 class="comments-count">8 Comments</h4>
+              <h4 class="comments-count text-green">8 Comments</h4>
 
               <div id="comment-1" class="comment">
                 <div class="d-flex">
                   <div class="comment-img"><img src="assets/img/blog/comments-1.jpg" alt=""></div>
                   <div>
-                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan,2022</time>
-                    <p>
+                    <h5 class="text-white"><a href="" class="text-white">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01" class="text-white">01 Jan,2022</time>
+                    <p class="text-white">
                       Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
                       Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
                     </p>
@@ -257,9 +164,9 @@
                 <div class="d-flex">
                   <div class="comment-img"><img src="assets/img/blog/comments-2.jpg" alt=""></div>
                   <div>
-                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan,2022</time>
-                    <p>
+                    <h5 class="text-white"><a href="" class="text-white">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01" class="text-white">01 Jan,2022</time>
+                    <p class="text-white">
                       Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
                     </p>
                   </div>
@@ -269,9 +176,9 @@
                   <div class="d-flex">
                     <div class="comment-img"><img src="assets/img/blog/comments-3.jpg" alt=""></div>
                     <div>
-                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                      <time datetime="2020-01-01">01 Jan,2022</time>
-                      <p>
+                      <h5 class="text-white"><a href="" class="text-white">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01" class="text-white">01 Jan,2022</time>
+                      <p class="text-white">
                         Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
 
                         Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
@@ -285,9 +192,9 @@
                     <div class="d-flex">
                       <div class="comment-img"><img src="assets/img/blog/comments-4.jpg" alt=""></div>
                       <div>
-                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                        <time datetime="2020-01-01">01 Jan,2022</time>
-                        <p>
+                        <h5 class="text-white"><a href="" class="text-white">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01" class="text-white">01 Jan,2022</time>
+                        <p class="text-white">
                           Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
                         </p>
                       </div>
@@ -303,9 +210,9 @@
                 <div class="d-flex">
                   <div class="comment-img"><img src="assets/img/blog/comments-5.jpg" alt=""></div>
                   <div>
-                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan,2022</time>
-                    <p>
+                    <h5 class="text-white"><a href="" class="text-white">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01" class="text-white">01 Jan,2022</time>
+                    <p class="text-white">
                       Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
                       Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
                     </p>
@@ -318,9 +225,9 @@
                 <div class="d-flex">
                   <div class="comment-img"><img src="assets/img/blog/comments-6.jpg" alt=""></div>
                   <div>
-                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan,2022</time>
-                    <p>
+                    <h5 class="text-white"><a href="" class="text-white">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01" class="text-white">01 Jan,2022</time>
+                    <p class="text-white">
                       Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
                     </p>
                   </div>
@@ -338,8 +245,8 @@
 
               <form action="">
 
-                <h4>Post Comment</h4>
-                <p>Your email address will not be published. Required fields are marked * </p>
+                <h4 class="text-dark">Post Comment</h4>
+                <p class="text-dark">Your email address will not be published. Required fields are marked * </p>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input name="name" type="text" class="form-control" placeholder="Your Name*">
@@ -360,7 +267,7 @@
                 </div>
 
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Post Comment</button>
+                  <button type="submit" class="btn btn-success">Post Comment</button>
                 </div>
 
               </form>
@@ -408,7 +315,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <h4><a href="blog-details.php">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -416,7 +323,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
+                  <h4><a href="blog-details.php">Quidem autem et impedit</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -424,7 +331,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <h4><a href="blog-details.php">Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -432,7 +339,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
+                  <h4><a href="blog-details.php">Laborum corporis quo dara net para</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -440,7 +347,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-5.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <h4><a href="blog-details.php">Et dolores corrupti quae illo quod dolor</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -476,89 +383,7 @@
 
   </main>
 
-  <footer id="footer" class="footer accent-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Impact</span>
-          </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Impact</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <?php include_once 'includes/footer.php' ?>
 </body>
 
 </html>

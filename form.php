@@ -30,15 +30,14 @@
         <!-- Contact Section -->
         <section id="contact" class="contact section">
             <div class="container section-title" data-aos="fade-up">
-                <h2>Form</h2>
-                <p>Each team is to provide the information needed in this form.</p>
+                <h2 class="text-green">Exhibition Form</h2>
+                <p class="text-white">Each team is to provide the information needed in this form.</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gx-lg-0 gy-2">
                     <div class="col-lg-12">
-                        <div class="container mt-2">
-                            <h2 class="text-logo-green">Exhibition Form</h2>
+                        <div class="container mt-1">
                             <!-- Progress Bar -->
                             <div class="progress">
                                 <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -55,7 +54,7 @@
                                         </div>
 
                                         <!-- Team Leader Information -->
-                                        <h4 class="text-logo-green">(Team Leader Information)</h4>
+                                        <h4 class="text-white">(Team Leader Information)</h4>
                                         <div class="mb-3 col-6">
                                             <label for="exampleFormControlInput1" class="form-label">Name</label>
                                             <input type="text" class="form-control" id="name-leader" name="leader_name" placeholder="Name..">
@@ -76,7 +75,7 @@
                                         <div id="team-members">
                                             <!-- Default first team member -->
                                             <div class="team-member mb-4">
-                                                <h3 class="text-logo-green">Team Members</h3>
+                                                <h3 class="text-white">Team Members</h3>
                                                 <div class="row">
                                                     <div class="mb-3 col-6">
                                                         <label class="form-label">Name</label>
@@ -100,14 +99,14 @@
 
                                         <!-- Add Member Button -->
                                         <div class="d-flex justify-content-end">
-                                            <button id="add-member-btn" class="col-2 btn text-white" type="button">
+                                            <button id="add-member-btn" class="col-2 btn btn-success text-white" type="button">
                                                 <i class="bi bi-plus text-white fw-bolder"></i> Add Member
                                             </button>
                                         </div>
 
                                         <!-- Hidden template for team member -->
                                         <div id="team-member-template" class="team-member mb-4 hidden">
-                                            <h4>Team Member <span class="member-number"></span></h4>
+                                            <h4 class="text-white">Team Member <span class="member-number"></span></h4>
                                             <div class="row">
                                                 <div class="mb-3 col-6">
                                                     <label class="form-label">Name</label>
@@ -129,7 +128,7 @@
                                         </div>
 
                                         <!-- Thematics Area -->
-                                        <h4 class="text-logo-green">(Thematics Area Selection) / Project Overview</h4>
+                                        <h4 class="text-white">(Thematics Area Selection) / Project Overview</h4>
                                         <div class="mb-3 col-6">
                                             <label for="expertise" class="form-label">Which thematics area does your project fall under?</label>
                                             <select class="form-select" id="expertise" name="expertise">
@@ -147,14 +146,13 @@
                                         </div>
                                     </div>
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <button class="btn btn-primary " type="button" onclick="nextStep()">Next</button>
+                                        <button class="btn btn-success btn-lg " type="button" onclick="nextStep()">Next</button>
                                     </div>
                                 </div>
 
                                 <!-- Step 2 -->
                                 <div class="step" id="step2" style="display: none;">
                                     <div class="row">
-                                        <h2 class="text-logo-green">Continue....</h2>
                                         <div class="mb-3 col-6">
                                             <label for="exampleFormControlTextarea1" class="form-label">Provide a brief summary of your Project (max 150 words)</label>
                                             <textarea class="form-control" id="project-sum" name="project_summary" rows="3"></textarea>
@@ -173,7 +171,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <h2 class="text-logo-green">Technology Stack</h2>
+                                        <h2 class="text-white">Technology Stack</h2>
                                         <div class="mb-3 col-6">
                                             <label class="form-label">What Technology will you use to solve the problem? (select all that apply)</label>
                                             <div class="form-check">
@@ -205,12 +203,12 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="d-flex justify-content-start">
-                                                <button class="btn btn-secondary mt-2" type="button" onclick="prevStep()">Back</button>
+                                                <button class="btn btn-primary mt-2" type="button" onclick="prevStep()">Back</button>
                                             </div>
                                         </div>
                                         <div class="col-6 text-end"> <!-- text-right replaced with text-end -->
                                             <div class="d-flex justify-content-end">
-                                                <button class="btn btn-primary mt-2" type="button" onclick="nextStep()">Next</button>
+                                                <button class="btn btn-success mt-2" type="button" onclick="nextStep()">Next</button>
                                             </div>
                                         </div>
                                     </div>
@@ -218,7 +216,7 @@
                                 <!-- Step 3 -->
                                 <div class="step" id="step3" style="display: none;">
                                     <div class="row">
-                                        <h2 class="text-logo-green">Product Development</h2>
+                                        <h2 class="text-white">Product Development</h2>
                                         <div class="mb-3 col-6">
                                             <label for="exampleFormControlTextarea1" class="form-label">Describe the product you are developing, what will be the key features and functionalities? (max 200 words)</label>
                                             <textarea class="form-control" id="product-features" name="product_features" rows="3"></textarea>
@@ -251,8 +249,8 @@
                                             <textarea class="form-control" id="final-statement" name="final_statement" rows="3"></textarea>
                                         </div>
                                     </div>
-                                    <button class="btn btn-secondary mt-2" type="button" onclick="prevStep()">Back</button>
-                                    <input class="btn btn-primary mt-2" type="submit" name="submit" value="Submit">
+                                    <button class="btn btn-primary mt-2" type="button" onclick="prevStep()">Back</button>
+                                    <input class="btn btn-success mt-2" type="submit" name="submit" value="Submit">
                                 </div>
                             </form>
                         </div>

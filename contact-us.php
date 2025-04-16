@@ -36,8 +36,8 @@ session_start(); // Start session to show alert messages
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Get in touch with us for inquiries, support, or collaborations.</p>
+        <h2 class="text-green">Contact</h2>
+        <p class="text-white">Get in touch with us for inquiries, support, or collaborations.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -46,7 +46,7 @@ session_start(); // Start session to show alert messages
           <div class="col-lg-4">
             <div class="info-container d-flex flex-column align-items-center justify-content-center">
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <i class="bi bi-geo-alt flex-shrink-0 text-green"></i>
                 <div>
                   <h3>Address</h3>
                   <p>A20 Block A Software Enginerring Lab, Veritas University, Abuja</p>
@@ -54,7 +54,7 @@ session_start(); // Start session to show alert messages
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
+                <i class="bi bi-telephone flex-shrink-0 text-green"></i>
                 <div>
                   <h3>Call Us</h3>
                   <p>+234 810 961 3828</p>
@@ -62,7 +62,7 @@ session_start(); // Start session to show alert messages
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+                <i class="bi bi-envelope flex-shrink-0 text-green"></i>
                 <div>
                   <h3>Email Us</h3>
                   <p>support@vuselab.com.ng</p>
@@ -70,7 +70,7 @@ session_start(); // Start session to show alert messages
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                <i class="bi bi-clock flex-shrink-0"></i>
+                <i class="bi bi-clock flex-shrink-0 text-green"></i>
                 <div>
                   <h3>Open Hours:</h3>
                   <p>Mon-Fri: 9AM - 5PM</p>
@@ -101,7 +101,7 @@ session_start(); // Start session to show alert messages
                   <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <button type="submit" class="btn btn-dark btn-lg rounded-pill">Send Message</button>
+                  <button type="submit" class="btn btn-success btn-lg rounded-pill">Send Message</button>
                 </div>
               </div>
             </form>

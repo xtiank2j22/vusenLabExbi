@@ -19,8 +19,8 @@
                 <div class="container">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
-                            <h1>FAQ</h1>
-                            <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                            <h1 class="text-green">FAQ</h1>
+                            <p class="mb-0">Need help? We've got answers to the most common questions below. If you still have questions, feel free to contact our support team anytime.</p>
                         </div>
                     </div>
                 </div>
@@ -32,69 +32,45 @@
                 <div class="row gy-4">
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="content px-xl-5">
-                            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            <h3 class="text-green"><span>Frequently Asked </span><strong>Questions</strong></h3>
+                            <p class="text-white">
+                            Questions on your mind? We’ve got clear, helpful answers waiting for you.
+                            And if you don’t find what you’re looking for, our friendly support team is just a message away!
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                         <div class="faq-container">
-                            <div class="faq-item faq-active">
-                                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna duis?</span></h3>
-                                <div class="faq-content">
-                                    <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                                        gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-                            <div class="faq-item">
-                                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc faucibus a
-                                        pellentesque?</span></h3>
-                                <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                                        id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                                        elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
+                            <?php
+                            include_once 'cms/admin/include/db_conn.php'; // adjust path if needed
 
-                            <div class="faq-item">
-                                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span>
-                                </h3>
-                                <div class="faq-content">
-                                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                                        elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                                        eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                                        sed odio morbi quis</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
+                            $sql = "SELECT id, faq_title, faq_message FROM faq ORDER BY id ASC";
+                            $result = $conn->query($sql);
+                            $i = 1;
 
-                            <div class="faq-item">
-                                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span>
-                                </h3>
-                                <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                                        id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                                        elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
+                            if ($result && $result->num_rows > 0):
+                                while ($row = $result->fetch_assoc()):
+                            ?>
+                                    <div class="faq-item">
+                                        <h3>
+                                            <span class="num"><?= $i++ ?>.</span>
+                                            <span><?= htmlspecialchars($row['faq_title']) ?></span>
+                                        </h3>
+                                        <div class="faq-content">
+                                            <p><?= nl2br(htmlspecialchars($row['faq_message'])) ?></p>
+                                        </div>
+                                        <i class="faq-toggle bi bi-chevron-right"></i>
+                                    </div>
+                            <?php
+                                endwhile;
+                            else:
+                                echo '<p class="text-danger">No FAQs found.</p>';
+                            endif;
 
-                            <div class="faq-item">
-                                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et tortor
-                                        consequat?</span></h3>
-                                <div class="faq-content">
-                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in.
-                                        Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
-                                        Purus gravida quis blandit turpis cursus in</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
+                            $conn->close();
+                            ?>
                         </div>
+
 
                     </div>
                 </div>

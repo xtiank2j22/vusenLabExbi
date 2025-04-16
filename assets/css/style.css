@@ -6,12 +6,7 @@
   text-align: left;
   width: auto;
   max-width: 40%;
-  background: rgba(
-    1,
-    53,
-    47,
-    0.7
-  ); /* Teal Green (#038375) with 70% transparency */
+  background: rgba( 1, 53,47,0.7); /* Teal Green (#038375) with 70% transparency */
   padding: 20px;
   border-radius: 10px;
   height: 300px !important;
@@ -103,13 +98,15 @@
     font-size: 0.9rem;
     padding: 8px 15px;
   }
-}
-/* Set fixed height for carousel images on large screens */
-.carousel-inner img {
-  height: 800px !important;
-  /* Ensures the image maintains aspect ratio without distortion */
-}
 
+ 
+.inul li{
+  text-decoration: none !important;
+  list-style: none !important;
+}
+.h-400{
+  height: 40px !important;
+}
 /* Adjust height for responsiveness */
 @media (max-width: 1024px) {
   .carousel-inner img {
@@ -139,7 +136,6 @@
   background-color: #e5e6eb !important;
   color: #008374;
 }
-/* .img-core{} */
 /*form section*/
 .section-hero {
   position: relative;
@@ -170,4 +166,16 @@
 }
 .h-550 {
   height: 550px !important;
+}
+.text-green{
+  color: rgb(81, 218, 31);
+}l
+.bg-green{
+  background-color: rgb(81, 218, 31);
+}
+.h-215{
+  height: 215px !important;
+}
+.m--1{
+  margin-top: -1% !important;
 }
