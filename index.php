@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -22,32 +21,19 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2 class="text-green">Welcome to VUSELab<br></h2>
-          <p class="text-white">Veritas University Software Engineering Laboratory (VUSELab)</p>
         </div><!-- End Section Title -->
         <div class="container">
-          <div class="row align-items-center gy-4"> <!-- added align-items-center -->
+          <div class="row gy-4 equal-height"> <!-- Added equal-height class -->
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/slider/slider-10.jpeg" class="img-fluid rounded-4" alt="">
+              <img src="assets/img/slider/slider-10.jpeg" alt="">
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
-              <div class="content ps-0 ps-lg-5">
-                <p class="fst-italic text-white">is a vibrant innovation hub located within the Department of Software Engineering at Veritas University, Abuja. We are dedicated to equipping students with 21st-century digital skills and providing a platform for creativity, innovation, and entrepreneurship.</p>
-
-                <p class="fst-italic text-white">Our focus is on nurturing young minds to develop practical software solutions that address real-life challenges across key sectors such as health, agriculture, education, energy, and security. At VUSELab, we believe in learning by doing—through hands-on projects, competitions, research, and industry collaborations.</p>
-
-                <div class="faq-content">
-                  <h3 class="text-green">Our Vision:</h3>
-                  <p class="text-white">To be a leading engineering innovation hub that drives technological advancement and practical solutions for societal challenges.</p>
-                </div>
-
-                <div class="faq-content">
-                  <h3 class="text-green">Our Mission:</h3> <!-- Changed duplicated Vision title -->
-                  <ul class="list-unstyled">
-                    <li class="text-white"><i class="bi bi-check-circle-fill text-green"></i> <span>To equip students with industry-relevant digital skills.</span></li>
-                    <li class="text-white"><i class="bi bi-check-circle-fill text-green"></i> <span>To promote research and innovation in STEM and related fields.</span></li>
-                    <li class="text-white"><i class="bi bi-check-circle-fill text-green"></i> <span>To foster collaboration between academia, industry, and society for impactful solutions.</span></li>
-                  </ul>
-                </div>
+              <div class="content d-flex flex-column justify-content-center">
+                <p class="text-green">Veritas University Software Engineering Laboratory (VUSELab)</p>
+                <p class="fst-italic text-white">VUSELab is an innovation hub within the Department of Software Engineering at Veritas University, Abuja. Our mission is to empower students with essential 21st-century digital skills while fostering creativity, innovation, and entrepreneurship.</p>
+                <p class="fst-italic text-white">We focus on guiding young talents to build practical software solutions that address real-world problems in key sectors such as health, agriculture, education, energy, and security. At VUSELab, we emphasize experiential learning through hands-on projects, hackathons, research, and partnerships with industry leaders.</p>
+                <p class="fst-italic text-white">Our dynamic environment encourages collaboration, critical thinking, and problem-solving. We provide opportunities for students, researchers, startups, and investors to connect, exchange ideas, and develop impactful solutions that make a difference in society.</p>
+                <p class="fst-italic text-white">Whether you're looking to gain tech skills, launch a startup, or support innovation, VUSELab offers the resources and community to help you succeed. Join us in shaping the future through technology and innovation. The Lab inspires a culture of innovation and problem-solving among students. Through workshops, mentorship, and tech-driven programs, we empower future software engineers to tackle societal challenges creatively.</p>
               </div>
             </div>
           </div>
@@ -59,8 +45,8 @@
       <div class="container bg-black-trans py-2">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2 class="text-green">Objectives<br></h2>
-          <p class="text-white">Veritas University Software Exhibition Objective encompasses verious fields of study </p>
+          <h2 class="text-green">What We Do<br></h2>
+          <p class="text-white">At VUSELab, we're not just building software, we're building the future. If you're ready to innovate, collaborate, and lead, we invite you to be part of our growing community of tech driven change makers </p>
         </div><!-- End Section Title -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 align-items-center">
@@ -70,37 +56,37 @@
                   <div class="stats-item d-flex">
                     <i class="bi bi-mortarboard flex-shrink-0 text-green"></i>
                     <div>
-                      <p class="text-white"><strong>To encourage students to apply software engineering principles in solving real-world problems.</strong></p>
+                      <h6 class="text-green">Research & Innovation</h6>
+                      <p class="text-white"><strong>Driving cutting-edge research in areas such as artificial intelligence, cybersecurity, and data analytics.</strong></p>
                     </div>
                   </div>
                 </div><!-- End Stats Item -->
                 <div class="col-lg-4">
                   <div class="stats-item d-flex">
-                    <i class="bi bi-binoculars flex-shrink-0 text-green"></i>
+                    <i class="bi bi-braces-asterisk flex-shrink-0 text-green"></i>
                     <div>
-                      <p class="text-white"><strong>To promote innovation in key sectors: Agriculture
-                          Health, Security, Energy, and Education.</strong></p>
+                      <h6 class="text-green">Software Development Training</h6>
+                      <p class="text-white"><strong>Hands-on sessions in web, mobile, AI, and IoT technologies.</strong></p>
                     </div>
                   </div>
                 </div><!-- End Stats Item -->
                 <div class="col-lg-4">
                   <div class="stats-item d-flex">
-                    <i class="bi bi-collection flex-shrink-0 text-green"></i>
+                    <i class="bi bi-award flex-shrink-0 text-green"></i>
                     <div>
-                      <!-- <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                      class="purecounter"></span> -->
-                      <p class="text-white"><strong>To provide a platform for students to showcase their projects to industry experts and potential em plovers.</strong></p>
+                      <h6 class="text-green">Competitions & Hackathons</h6>
+                      <p class="text-white"><strong>Hosting exhibitions and innovation challenges that showcase student creativity and technical excellence.</strong></p>
                     </div>
                   </div>
                 </div><!-- End Stats Item -->
 
                 <div class="col-lg-4">
                   <div class="stats-item d-flex">
+                    <!-- <i class="bi bi-house-gear"></i> -->
                     <i class="bi bi-people flex-shrink-0 text-green"></i>
                     <div>
-                      <!-- <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                      class="purecounter"></span> -->
-                      <p class="text-white"><strong>To foster collaboration between academia and industry, enhancing employability and entrepreneurial spirit.</strong></p>
+                      <h6 class="text-green">Industry Collaboration</h6>
+                      <p class="text-white"><strong>Partnering with tech companies for mentorship, project sponsorship, and career opportunities.</strong></p>
                     </div>
                   </div>
                 </div><!-- End Stats Item -->
@@ -117,11 +103,10 @@
                 </div><!-- End Stats Item -->
                 <div class="col-lg-4">
                   <div class="stats-item d-flex float-end">
-                    <i class=" bi bi-code-square flex-shrink-0 text-green"></i>
+                    <i class="bi bi-question-circle flex-shrink-0 text-green"></i>
                     <div>
-                      <!-- <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
-                      class="purecounter"></span> -->
-                      <p class="text-white"><strong>To identify and nurture young talents in software development and innovation.</strong></p>
+                      <h6 class="text-green">Entrepreneurial Support</h6>
+                      <p class="text-white"><strong>Supporting the transformation of ideas into viable products through incubation and funding opportunities.</strong></p>
                     </div>
                   </div>
                 </div><!-- End Stats Item -->
