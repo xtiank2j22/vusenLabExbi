@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -334,9 +335,8 @@
                         class="img-fluid rounded pro-img" /> </a>
                     <div class="card-body">
                       <h5 class="card-title">
-                        <a href="portfolio-details.html" title="More Details"><?= htmlspecialchars($row['title']) ?></a>
+                        <a href="projects-detail.php?id=<?= $row['id'] ?>" title="More Details"><?= htmlspecialchars($row['title']) ?></a>
                       </h5>
-                      <p class="card-text"><?= htmlspecialchars($row['about']) ?></p>
                     </div>
                   </div>
                 </div><!-- End Card 1 -->

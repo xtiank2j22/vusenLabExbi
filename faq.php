@@ -70,11 +70,8 @@
                             $conn->close();
                             ?>
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
         </section><!-- /Faq Section -->
     </main>

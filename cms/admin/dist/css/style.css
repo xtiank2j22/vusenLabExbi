@@ -1,0 +1,9 @@
+
+.td-text {
+    word-wrap: break-word;
+    /* Text breaks into multiple lines */
+    white-space: normal;
+    /* Prevents text from staying in one line */
+    max-width: 300px;
+    /* Set a max-width to limit cell width */
+}

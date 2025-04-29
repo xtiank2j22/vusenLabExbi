@@ -32,8 +32,12 @@
             <div class="container section-title" data-aos="fade-up">
                 <h2 class="text-green">Exhibition Form</h2>
                 <p class="text-white">Each team is to provide the information needed in this form.</p>
+                <div class="scrow-text my-2">
+                    <marquee>
+                        <p class="text-green">Please be informed that the deadline for the exhibition form submission is <span class="text-danger"><strong>10th May, 2025.</strong></span> Kindly ensure all forms are submitted on or before the stated date.</p>
+                    </marquee>
+                </div>
             </div><!-- End Section Title -->
-
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gx-lg-0 gy-2">
                     <div class="col-lg-12">

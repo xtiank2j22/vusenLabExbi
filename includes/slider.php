@@ -10,12 +10,16 @@
         <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
         <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
         <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
 
       </div>
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/slider/Slider-1.JPG" alt="impart image" class="d-block w-100">
+          <a href="form.php"><img src="assets/img/slider/exhibition-banner-size.jpg" alt="impart image" class="d-block w-100"></a>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/slider/Slider-3.jpg" alt="Chicago" class="d-block w-100">
         </div>
         <div class="carousel-item">
           <img src="assets/img/slider/Slider-3.jpg" alt="Chicago" class="d-block w-100">

@@ -190,8 +190,11 @@
                               <td><?= htmlspecialchars($row['blog_message']) ?></td>
                               <td><?= date("d/m/Y", strtotime($row['created_at'])) ?></td>
                               <td>
-                                <a href="#" class=" btn btn-success">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <a href="edit_blog.php?id=<?= $row['id'] ?>" class=" btn btn-success">Edit</a>
+                                <form action="delete_blog.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this blog post?');" style="display:inline;">
+                                  <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                  <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                               </td>
                             </tr>
                             <!-- blog row table display end -->
@@ -240,7 +243,10 @@
                               <td><?= date("d/m/Y", strtotime($row['created_date'])) ?></td>
                               <td>
                                 <a href="#" class=" btn btn-success">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <form action="delete_faq.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this faq post?');" style="display:inline;">
+                                  <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                  <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                               </td>
                             </tr>
                             <!-- blog row table display end -->

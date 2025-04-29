@@ -20,7 +20,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1 class="text-green">Projects</h1>
-              <p class="mb-0 text-white">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p class="mb-0 text-white">Explore our creative and impactful projects, blending design, technology, and strategy. Each project reflects our passion for innovation and excellence, delivering real solutions that engage, inspire, and drive results..</p>
             </div>
           </div>
         </div>
@@ -39,7 +39,6 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2 class="text-green">Our Projects</h2>
-        <p class="text-white">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit </p>
       </div><!-- End Section Title -->
       <div class="container">
         <div class="row g-4">
@@ -76,15 +75,14 @@
                       class="img-fluid rounded pro-img" /> </a>
                   <div class="card-body">
                     <h5 class="card-title">
-                      <a href="portfolio-details.html" title="More Details"><?= htmlspecialchars($row['title']) ?></a>
+                      <a href="projects-detail.php?id=<?= $row['id'] ?>" title="More Details"><?= htmlspecialchars($row['title']) ?></a>
                     </h5>
-                    <p class="card-text"><?= htmlspecialchars($row['about']) ?></p>
                   </div>
                 </div>
               </div><!-- End Card 1 -->
             <?php endwhile; ?>
           <?php else: ?>
-            <p class="text-danger">No blog posts found.</p>
+            <p class="text-danger">No Project posts found.</p>
           <?php endif; ?>
         </div>
       </div>
